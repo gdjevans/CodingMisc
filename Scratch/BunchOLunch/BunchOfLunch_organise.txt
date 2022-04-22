@@ -1,0 +1,11 @@
+''''
+Bunch O Lunch App
+
+The purpose of Bunch O Lunch is to produce a dinner menu from favourite dishes, and produce a shopping list of the ingredients if required. 
+''''
+
+#1. How many days to plan?
+
+#2. Choose dishes
+
+#3. Build shopping list
