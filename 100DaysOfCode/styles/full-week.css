@@ -5,10 +5,10 @@ header{
 h1{
     font-size: 48px;
     color: rgb(71, 62, 62);
-    margin: 12px;
+    margin: 0;
 }
 #description{
-    margin-bottom: 36px;
+    margin: 12px 0;
 }
 /*header p{
     margin-bottom: 36px;
@@ -20,6 +20,8 @@ a{
     border: 1px solid rgb(197, 1, 78);
     border-radius: 4px;
     font-size: 24px;
+    display: inline-block;
+    margin: 0;
 }
 a:hover{
     background-color: rgb(180, 12, 90);
@@ -33,6 +35,7 @@ ol{
 }
 li{
     padding: 16px;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
     margin: 32px;
     background-color: rgb(223, 136, 124);
     border-radius: 6px;
