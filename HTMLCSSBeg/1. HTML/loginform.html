@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Form</title>
+</head>
+<body>
+    <form method="get">
+        <label for="email">Email: </label>
+        <input type="text" name="email" placeholder="Email" id="email"/>
+        <label for="password">Password: </label>
+        <input type="password" name="password" placeholder="Password" id="password"/>
+
+        <input type="submit" value="Submit"/>
+    </form>
+    <br /><br />
+    <form>
+        <label for="address">Address: </label>
+        <input type="text" name="Address" placeholder="Address" id="address"/>
+        <br />
+        <label for="postcode">PostCode: </label>
+        <input type="text" name="Postcode" placeholder="PostCode" id="postcode"/>
+        <br />
+        <label for="city">City: </label>
+        <input type="text" name="City" placeholder="City" id="city"/>
+        <br />
+        <p>Choose your shipping method</p>
+        <select name="shipping">
+            <option value="free">Free Super saver shipping</option>
+            <option value="twoday">Two day Shipping</option>
+            <option value="oneday">One day Shipping</option>
+        </select>
+        <p>Choose your payment method</p>
+        <label>Paypal<input type="radio" name="payment" value="paypal"/></label>
+        <label>Cash<input type="radio" name="payment" value="cash"/></label>
+        <label>Debit Card<input type="radio" name="payment" value="debit"/></label>
+        <br/>
+        <label for="comments">Comments: </label>
+        <textarea name="comment" rows="4" cols="40" id="commments"></textarea>
+        <br />
+        <label>Sign me up for email updates <input type="checkbox" id="emailupdates" name="emailupdates" checked="checked"/></label>
+        <br />
+        <label>Securely save my payment details<input type="checkbox" id="savepayment" name="savepayment"/></label>
+        <br />
+        <input type="submit" value="Submit"/>
+    </form>
+</body>
+</html>
