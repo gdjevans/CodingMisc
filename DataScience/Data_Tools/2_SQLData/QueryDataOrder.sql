@@ -1,0 +1,1 @@
+SELECT * FROM SalesPerson ORDER BY age, salary DESC
