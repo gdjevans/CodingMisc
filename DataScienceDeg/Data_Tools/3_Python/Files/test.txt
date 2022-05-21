@@ -1,0 +1,6 @@
+monkey
+panda
+lion
+tiger
+cat
+dog
