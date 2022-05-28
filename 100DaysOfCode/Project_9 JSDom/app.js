@@ -14,6 +14,7 @@ function retrieveUserInput(event) {
     let enteredText = event.target.value;
     console.log(enteredText);
     //console.log(event);
+    
 }
 
 inputElement.addEventListener('input', retrieveUserInput);
