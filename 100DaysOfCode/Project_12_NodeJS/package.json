@@ -1,0 +1,26 @@
+{
+  "name": "100daysofcode",
+  "version": "1.0.0",
+  "description": "Getting started with  Node and Express",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon y:/Projects/TutzProjectz2022/CodingMisc/100DaysOfCode/Project_12_NodeJS/app.js"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gdjevans/CodingMisc.git#master"
+  },
+  "author": "Glyn Evans",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gdjevans/CodingMisc/issues"
+  },
+  "homepage": "https://github.com/gdjevans/CodingMisc/tree/master#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}

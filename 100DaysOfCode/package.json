@@ -1,22 +1,18 @@
 {
-  "name": "100daysofcode",
+  "name": "web-development-complete-guide",
   "version": "1.0.0",
-  "description": "Getting started with  Node and Express",
+  "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gdjevans/CodingMisc.git#master"
-  },
-  "author": "Glyn Evans",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/gdjevans/CodingMisc/issues"
-  },
-  "homepage": "https://github.com/gdjevans/CodingMisc/tree/master#readme",
+  "keywords": [],
+  "author": "Maximilian Schwarzmüller (Academind GmbH)",
+  "license": "MIT",
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
