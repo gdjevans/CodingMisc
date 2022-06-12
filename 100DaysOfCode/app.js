@@ -4,6 +4,9 @@ const express = require('express');
 
 const app = express();
 
+app.use(express.static('public'));
+app.use(express.urlencoded({extended: false}));
+
 app.get('/', function(req, res){
     const htmlFilePath = path.join(__dirname, 'views', 'index.html');
     res.sendFile(htmlFilePath);
@@ -17,6 +20,10 @@ app.get('/restaurants', function(req, res) {
 app.get('/recommend', function(req, res) {
     const htmlFilePath = path.join(__dirname, 'views', 'recommend.html');
     res.sendFile(htmlFilePath);
+});
+
+app.post('/recommend', function(req, res) {
+    const restaurant = req.body;
 });
 
 app.get('/confirm', function(req, res) {
