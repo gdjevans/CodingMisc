@@ -1,0 +1,13 @@
+use ratingportal //to switch to a new database
+
+db.restaurants.find() // to open up the table file and display contents.
+
+db.restaurants.find({ name: "Munich Schnitzelhouse" }) // To find specific records
+
+db.restaurants.find({}, {name: 1}) // Gets specfic data back from each record.
+
+db.restaurants.find({}, {name:1, _id: 0}) // Writing 0 next to a data excludes that from showing up in the result.
+
+db.restaurants.updateOne({_id: ObjectId("62b6d4208617d1bd921fcf83")}, { $set: { name: "Munich Schnitzelhouse"}}) //Updating a record by id.
+
+db.restaurants.deleteOne({_id: ObjectId("62b6d4208617d1bd921fcf83")}) //Deleting objects from the records by id.
