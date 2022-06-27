@@ -1,0 +1,7 @@
+use blog
+
+db.authors.insertOne({name: "Glyn Evans", email: "glyn@test.com"})
+db.authors.insertOne({name: "Maximilian Schwarzmuller", email: "max@test.com"})
+db.authors.insertOne({name: "Manuel Lorenz", email: "manuel@test.com"})
+
+db.authors.find()
