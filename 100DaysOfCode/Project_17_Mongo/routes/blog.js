@@ -1,6 +1,7 @@
 const express = require('express');
 
 const mongodb = require('mongodb');
+const { getDb } = require('../data/database');
 
 const db = require('../data/database');
 
@@ -12,8 +13,9 @@ router.get('/', function(req, res) {
   res.redirect('/posts');
 });
 
-router.get('/posts', function(req, res) {
-  res.render('posts-list');
+router.get('/posts', async function(req, res) {
+  const posts = await db.getDb().collection('posts').find({}).project({ title: 1,  summary: 1, 'author.name': 1 }).toArray();
+  res.render('posts-list', { posts: posts });
 });
 
 router.get('/new-post', async function(req, res) {
@@ -42,5 +44,52 @@ router.post('/posts', async function(req, res) {
   console.log(result);
   res.redirect('/posts');
 });
+
+router.get('/posts/:id', async function(req, res) {
+  const postId = req.params.id;
+  const post = await getDb().collection('posts').findOne({ _id: new ObjectId(postId) }, { projection: { summary : 0} })
+
+  if (!post) {
+    return res.status(400).render('404');
+  }
+  post.humanReadableDate = post.date.toLocaleDateString('en-US', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+
+  post.date = post.date.toISOString();
+ 
+  res.render('post-detail', { post: post });
+})
+
+router.get('/posts/:id/edit', async function(req, res) {
+  const postId = req.params.id;
+  const post = await getDb().collection('posts').findOne({ _id: new ObjectId(postId) }, { title: 1, summary : 1, body: 1 });
+
+  if (!post) {
+    return res.status(400).render('404');
+  }
+
+  res.render('update-post', { post: post });
+});
+
+router.post('/posts/:id/edit', async function(req, res) {
+  const postId = new ObjectId(req.params.id);
+  const result = await getDb().collection('posts').updateOne({_id: postId}, {$set: { 
+    title: req.body.title,
+    summary: req.body.summary,
+    body: req.body.content,
+   },});
+
+   res.redirect('/posts');
+});
+
+router.post('/posts/:id/delete', async function(req, res) {
+  const postId = new ObjectId(req.params.id);
+  const result = await getDb().collection('posts').deleteOne({_id: postId});
+  res.redirect('/posts');
+})
 
 module.exports = router;
