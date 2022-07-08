@@ -1,0 +1,21 @@
+#Section 2.2
+#List of some numbers
+"""
+list1 = [1,2,3,4,5]
+
+summed_list = 0
+
+for x in list1:
+    summed_list = summed_list + x
+
+print("Our summation is...", summed_list)
+"""
+
+list1 = [100,200,300,400,5]
+
+summed_list = 450
+
+for x in list1:
+    summed_list = summed_list + 0.75*x
+
+print("Priofits after taxes are:", summed_list)

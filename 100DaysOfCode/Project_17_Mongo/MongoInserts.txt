@@ -1,0 +1,5 @@
+// Mongo database inserting data
+
+db.restaurants.insertOne({ name: "Munich Schniitzelhouse", address: {street: "Some street 5", streetNumber: "23b"}})
+
+db.restaurants.insertOne({ name: "Burger House", address: {street: "Another Street", streetNumber: "15"}})

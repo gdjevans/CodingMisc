@@ -1,0 +1,19 @@
+db.restaurants.deleteMany({}) //Deleting all records in a database.
+
+db.types.insertOne({name: "German"})
+
+db.types.insertOne({name: "Italian"})
+
+db.types.insertOne({name: "American"})
+
+db.types.insertOne({name: "French"})
+
+db.restaurants.insertOne({ name: "Munich Schnitzelhouse", address: { street: "Foodstreet", streetNumber: "23b", postalCode: 80333, city: "Munich", country: "Germany" }, type: { typeId: ObjectId("62b84c9e3a907edccf6fa065"), name: "German" } })
+
+db.restaurants.insertOne({ name: "Berlin Burgerhouse", address: { street: "Another street", streetNumber: "15", postalCode: 656200, city: "Berlin", country: "Germany" }, type: { typeId: ObjectId("62b84cb63a907edccf6fa067"), name: "American" } })
+
+db.reviews.insertOne({ reviewer: {firstName: "Max", lastName: "Schwarzmuller"}, rating: 3, text: "This was okay - couldf be better!", date: new Date("2021-09-10"), restaurant: { id: ObjectId("62b84fd43a907edccf6fa069"), name: "Munich Schnitzelhouse"}})
+
+db.reviews.insertOne({ reviewer: {firstName: "Yilla", lastName: "Makapeace"}, rating: 5, text: "This was amazing - I enjoyed it so much!", date: new Date("2021-10-17"), restaurant: { id: ObjectId("62b8509d3a907edccf6fa06a"), name: "Berlin Burgerhouse"}})
+
+db.reviews.find({rating: {$gt: 4 }})

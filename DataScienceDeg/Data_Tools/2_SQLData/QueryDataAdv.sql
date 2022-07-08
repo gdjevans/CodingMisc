@@ -1,0 +1,1 @@
+SELECT * FROM SalesPerson WHERE age NOT IN (34,57)
