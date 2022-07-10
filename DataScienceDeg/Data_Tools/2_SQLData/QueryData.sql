@@ -1,0 +1,1 @@
+SELECT * FROM SalesPerson WHERE age >= 40 OR salary > 60000

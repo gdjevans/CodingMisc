@@ -1,0 +1,49 @@
+﻿Order ID,Employee ID,Customer ID,Order Date,Payment Type,Paid Date,Last Name,First Name,Company
+30,9,27,15/01/2006,Check,15/01/2006,Hellung-Larsen,Anne,Company AA
+31,3,4,20/01/2006,Credit Card,20/01/2006,Kotas,Jan,Company D
+32,4,12,22/01/2006,Credit Card,22/01/2006,Sergienko,Mariya,Company L
+33,6,8,30/01/2006,Credit Card,30/01/2006,Neipper,Michael,Company H
+34,9,4,06/02/2006,Check,06/02/2006,Hellung-Larsen,Anne,Company D
+35,3,29,10/02/2006,Check,10/02/2006,Kotas,Jan,Company CC
+36,4,3,23/02/2006,Cash,23/02/2006,Sergienko,Mariya,Company C
+37,8,6,06/03/2006,Credit Card,06/03/2006,Giussani,Laura,Company F
+38,9,28,10/03/2006,Check,10/03/2006,Hellung-Larsen,Anne,Company BB
+39,3,8,22/03/2006,Check,22/03/2006,Kotas,Jan,Company H
+40,4,10,24/03/2006,Credit Card,24/03/2006,Sergienko,Mariya,Company J
+41,1,7,24/03/2006,null,null,Freehafer,Nancy,Company G
+42,1,10,24/03/2006,null,null,Freehafer,Nancy,Company J
+43,1,11,24/03/2006,null,null,Freehafer,Nancy,Company K
+44,1,1,24/03/2006,null,null,Freehafer,Nancy,Company A
+45,1,28,07/04/2006,Credit Card,07/04/2006,Freehafer,Nancy,Company BB
+46,7,9,05/04/2006,Check,05/04/2006,Zare,Robert,Company I
+47,6,6,08/04/2006,Credit Card,08/04/2006,Neipper,Michael,Company F
+48,4,8,05/04/2006,Check,05/04/2006,Sergienko,Mariya,Company H
+50,9,25,05/04/2006,Cash,05/04/2006,Hellung-Larsen,Anne,Company Y
+51,9,26,05/04/2006,Credit Card,05/04/2006,Hellung-Larsen,Anne,Company Z
+55,1,29,05/04/2006,Check,05/04/2006,Freehafer,Nancy,Company CC
+56,2,6,03/04/2006,Check,03/04/2006,Cencini,Andrew,Company F
+57,9,27,22/04/2006,Check,22/04/2006,Hellung-Larsen,Anne,Company AA
+58,3,4,22/04/2006,Credit Card,22/04/2006,Kotas,Jan,Company D
+59,4,12,22/04/2006,Credit Card,22/04/2006,Sergienko,Mariya,Company L
+60,6,8,30/04/2006,Credit Card,30/04/2006,Neipper,Michael,Company H
+61,9,4,07/04/2006,Check,07/04/2006,Hellung-Larsen,Anne,Company D
+62,3,29,12/04/2006,Check,12/04/2006,Kotas,Jan,Company CC
+63,4,3,25/04/2006,Cash,25/04/2006,Sergienko,Mariya,Company C
+64,8,6,09/05/2006,Credit Card,09/05/2006,Giussani,Laura,Company F
+65,9,28,11/05/2006,Check,11/05/2006,Hellung-Larsen,Anne,Company BB
+66,3,8,24/05/2006,Check,24/05/2006,Kotas,Jan,Company H
+67,4,10,24/05/2006,Credit Card,24/05/2006,Sergienko,Mariya,Company J
+68,1,7,24/05/2006,,,Freehafer,Nancy,Company G
+69,1,10,24/05/2006,,,Freehafer,Nancy,Company J
+70,1,11,24/05/2006,,,Freehafer,Nancy,Company K
+71,1,1,24/05/2006,,,Freehafer,Nancy,Company A
+72,1,28,07/06/2006,Credit Card,07/06/2006,Freehafer,Nancy,Company BB
+73,7,9,05/06/2006,Check,05/06/2006,Zare,Robert,Company I
+74,6,6,08/06/2006,Credit Card,08/06/2006,Neipper,Michael,Company F
+75,4,8,05/06/2006,Check,05/06/2006,Sergienko,Mariya,Company H
+76,9,25,05/06/2006,Cash,05/06/2006,Hellung-Larsen,Anne,Company Y
+77,9,26,05/06/2006,Credit Card,05/06/2006,Hellung-Larsen,Anne,Company Z
+78,1,29,05/06/2006,Check,05/06/2006,Freehafer,Nancy,Company CC
+79,2,6,23/06/2006,Check,23/06/2006,Cencini,Andrew,Company F
+80,2,4,25/04/2006,,,Cencini,Andrew,Company D
+81,2,3,25/04/2006,,,Cencini,Andrew,Company C
