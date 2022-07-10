@@ -154,4 +154,9 @@ router.post('/logout', function (req, res) {
   res.redirect('/');
 });
 
+routes.get('/401', function (req, res) {
+  req.session.user = null;
+  req.session.isAuthenticated = false;
+  res.redirect('/');
+});
 module.exports = router;
