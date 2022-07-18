@@ -1,6 +1,5 @@
 <%- include('../../shared/includes/head', { pageTitle: 'All Products'}) %> 
-    <link rel="stylesheet" href="/styles/forms.css">
-    <link rel="stylesheet" href="/styles/auth.css">
+    <link rel="stylesheet" href="/styles/products.css"/>
 </head>
 <body>
     <%- include('../../shared/includes/header') %>
@@ -11,7 +10,7 @@
             <p><a href="/admin/products/new" class="btn">Add Product</a></p>
         </section>
         <section>
-            <ul>
+            <ul id="produtcs-grid">
                 <% for (const product of products) { %> 
                     <li>
                         <%- include('include/product-item', { product: product })  %> 
