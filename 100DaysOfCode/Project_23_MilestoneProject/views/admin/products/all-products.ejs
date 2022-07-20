@@ -11,10 +11,10 @@
             <p><a href="/admin/products/new" class="btn">Add Product</a></p>
         </section>
         <section>
-            <ul id="produtcs-grid">
+            <ul id="products-grid">
                 <% for (const product of products) { %> 
                     <li>
-                        <%- include('include/product-item', { product: product })  %> 
+                        <%- include('../../shared/includes/product-item', { product: product })  %> 
                     </li>
                 <% } %> 
             </ul>
