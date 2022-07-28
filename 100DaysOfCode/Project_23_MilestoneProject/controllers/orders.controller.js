@@ -1,3 +1,4 @@
+//stripe connection request and key in separate ()
 const Order = require('../models/order.model');
 const User = require('../models/user.model');
 
@@ -31,10 +32,22 @@ async function addOrder(req, res, next) {
 
   req.session.cart = null;
 
+  //Stripe payment request.
+
   res.redirect('/orders');
+}
+
+function getSuccess(req, res) {
+  res.render('customer/orders/success');
+}
+
+function getFailure(req, res) {
+  res.render('customer/orders/failure');
 }
 
 module.exports = {
   addOrder: addOrder,
   getOrders: getOrders,
+  getSuccess: getSuccess,
+  getFailure: getFailure
 };
