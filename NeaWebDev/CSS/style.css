@@ -15,11 +15,11 @@ h2 {
 }
 
 p {
-    color: pink;
-}
-
-p {
-    color: green;
+    line-height: 20px;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 80%;
+    font-family: 'Poiret One', cursive;
 }
 
 li {
