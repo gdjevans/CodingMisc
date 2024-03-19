@@ -1,0 +1,204 @@
+body {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* 
+Glow Effect - glowEffectBtn
+Two Layer Swap - twoLayerSwapBtn
+Text Scaling - textScalingBtn
+Circular Swapping - circularSwapBtn
+Three Layer Effect - threeLayerEffectBtn
+*/
+
+a {
+	text-decoration: none;
+	padding: 30px 50px;
+	font-family: sans-serif;
+	font-size: 30px;
+	position: relative;
+	overflow: hidden;
+}
+
+a.glowEffectBtn {
+	color: rgb(49, 176, 151);
+	border: 3px solid rgb(49, 176, 151);;
+	transition: all 0.5s;
+}
+
+a.twoLayerSwapBtn {
+	background-color: #262626;
+	border: 3px solid #262626;
+	color: transparent;
+}
+
+a.textScalingBtn {
+	color: #262626;
+	border: 3px solid #262626;
+	transition: all .5s;
+}
+
+a.threeLayerEffectBtn {
+	text-transform: uppercase;
+	background-color: #f1c40f;
+	color: white;
+	/* letter-spacing: 2px; */
+}
+
+a.glowEffectBtn:before {
+	content: '';
+	background-color: white;
+	color: white;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	position: absolute;
+	transform: translateX(-100%) rotate(45deg);
+	transition: all 0.5s;
+}
+
+a.twoLayerSwapBtn:before {
+	content: 'Hover Me';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #f6ef1e;
+	color: #262626;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.5s;
+}
+
+a.textScalingBtn:before {
+	content: 'Hover me';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #262626;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: scale(5);
+	opacity: 0;
+	transition: all .5s;
+}
+
+a.threeLayerEffectBtn:before {
+	content: "HOVER ME";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #2ecc71;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: rotateX(270deg);
+	transform-origin: top;
+	transition: all 0.5s;
+  }
+
+a.twoLayerSwapBtn:after {
+	content: 'Hover Me';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #f6ef1e;
+	color: #262626;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.5s;
+	transform: translate(-100%, 100%);
+}
+
+a:after {
+	content: "HOVER ME";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: red;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform-origin: bottom;
+	transform: rotateX(270deg);
+	transition: all 0.5s;
+	transition-delay: 0.25s;
+  }
+
+a.glowEffectBtn:hover {
+	background-color: #2b9d80;
+}
+
+a.glowEffectBtn:hover:before {
+ 	transform: translateX(100%) rotate(45deg);
+}
+
+a.twoLayerSwapBtn:hover:before {
+	transform: translate(100%, -100%);
+}
+
+a.twoLayerSwapBtn:hover:after {
+	transform: translate(0, 0);
+}
+
+a.textScalingBtn:hover:before {
+	transform: scale(1);
+	opacity: 1;
+}
+
+a.threeLayerEffectBtn:hover:before, a.threeLayerEffectBtn:hover:after {
+	transform: rotateX(0deg); 
+ }
+
+.circularSwapBtn {
+	border: 2px solid tomato;
+	background:none;
+	color: tomato;
+	padding: 30px 38px;
+	font-size: 30px;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: all 0.5s;
+	position: relative;
+	color: tomato;
+	overflow: hidden;
+  }
+  
+  .circularSwapBtn:hover {
+	color: white;
+  }
+  
+  .circularSwapBtn:before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: tomato;
+	z-index: -1;
+	border-radius: 50% 50% 0% 0%;
+	height: 0%;
+	transition: all 0.5s;
+  }
+  
+  .circularSwapBtn:hover:before {
+	height: 190%;
+  }

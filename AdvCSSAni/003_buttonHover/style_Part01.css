@@ -1,0 +1,169 @@
+body {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+a.rotatingBtn {
+	text-decoration: none;
+	color: #262626;
+	font-family: sans-serif;
+	font-size: 30px;
+	border: 3px solid #262626;
+	padding: 30px 50px;
+	position: relative;
+	overflow: hidden;
+}
+a.swipeBtn {
+	text-decoration: none;
+	color: #351435;
+	font-family: sans-serif;
+	font-size: 30px;
+	border: 3px solid #351435;
+	padding: 30px 50px;
+	position: relative;
+	transition: all 1s;
+	overflow: hidden;
+}
+
+a.creativeBtn {
+	padding: 30px 50px;
+	font-family: sans-serif;
+	text-decoration: none;
+	color: #262626;
+	font-size: 30px;
+	/* letter-spacing: 2px; */
+	border: 3px solid #262626;
+	position: relative;
+	transition: 1s;
+}
+
+a.creativeStretchBtn {
+	text-decoration: none;
+	padding: 30px 50px;
+	color: #E1332D;
+	border: 3px solid #E1332D;
+	text-transform: uppercase;
+	font-size: 30px;
+	font-family: 'roboto';
+	font-weight: 300;
+	letter-spacing: -2px;
+	transition: all 0.5s
+}
+
+a.swipeTextBtn {
+	text-decoration: none;
+	color: rgb(49, 159, 189);
+	font-family: sans-serif;
+	font-size: 30px;
+	border: 3px solid rgb(30, 79, 139);
+	padding: 30px 50px;
+	position: relative;
+	transition: all 1s;
+	overflow: hidden;
+}
+
+a.rotatingBtn:before  {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: #fff200;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	transform-origin: bottom left;
+ 	transform: rotate(-90deg);
+	transition: transform 1s;
+}
+
+a.swipeBtn:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #351435;
+	z-index: -1;
+	transform: translateX(-100%);
+	transition: all 1s;
+}
+
+a.creativeBtn:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #262626;
+	transition: 1s;
+	transform: rotateX(90deg);
+	z-index: -1;
+}
+
+a.creativeBtn:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #262626;
+	transition: 1s;
+	transform: rotateY(90deg);
+	z-index: -1;
+}
+
+a.creativeStretchBtn:hover {
+	font-weight: 900;
+	letter-spacing: 10px;
+	border: 7px solid #E1332D;
+}
+
+a.swipeTextBtn:before {
+	content: 'YEAH!';
+	color: white;
+	background-color: #F44336;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	transform: translateY(-100%);
+	transition:all .5s;
+}
+
+a.rotatingBtn:hover:before  {
+	transform: rotate(0deg);
+}
+
+a.swipeBtn:hover:before {
+	transform: translateX(0);
+}
+
+a.swipeBtn:hover {
+	color: white;
+}
+
+a.creativeBtn:hover:before {
+	transform: rotateX(0);
+}
+
+a.creativeBtn:hover:after {
+	transform: rotateY(0);
+}
+
+a.creativeBtn:hover {
+	color: white;
+}
+
+a.swipeTextBtn:hover:before {
+	transform: translateY(0);
+}
