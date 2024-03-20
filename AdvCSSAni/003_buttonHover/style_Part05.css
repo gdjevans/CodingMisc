@@ -1,0 +1,430 @@
+@import url(https://fonts.googleapis.com/css?family=BenchNine:700);
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap");
+
+body {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	/* background-color: #272727;
+	color: white;  */
+}
+
+/* 
+  Skewed Button - skewedBtn
+  Pulse Button - pulseBtn
+  Diagonal Swipe Button - diagonalSwipeBtn
+  Target Sight Buttons - targetContainer - targetSightBtn
+  Glass Morph Button - glassContainer.div - btn
+*/
+
+.targetContainer {
+	display: flex;
+	gap: 150px;
+	flex-wrap: wrap;
+}
+
+.glassContainer {
+	width: 600px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	background: #0c2461;
+}
+
+a {
+	text-decoration: none;
+	padding: 30px 50px;
+	font-family: sans-serif;
+	font-size: 30px;
+	position: relative;
+}
+
+a.skewedBtn {
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 7px;
+	padding: 18px 30px;
+	background: transparent;
+	font-size: 28px;
+	color: white;
+}
+
+a.pulseBtn {
+	text-transform: uppercase;
+	padding: 25px 50px;
+	background-color: rgb(139, 133, 133);
+	color: white;
+	border-radius: 100px;
+	font-size: 24px;
+	transition: all 0.2s;
+}
+
+a.diagonalSwipeBtn {
+	text-decoration: none;
+	position: relative;
+	width: 190px;
+	height: 30px;
+	text-align: center;
+	/* line-height: 50px; */
+	color: #250e74;
+	border: 4px solid #250e74;
+	font-size: 24px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	transition: all 0.5s;
+	overflow: hidden;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a.targetSightBtn {
+	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 20px 35px;
+	border: 2px solid #1e9bff;
+	color: #1e9bff;
+	font-size: 20px;
+	letter-spacing: 4px;
+	transition: 0.5s;
+}
+
+.btn {
+	position: relative;
+	width: 155px;
+	height: 60px;
+	margin: 20px;
+	border-radius: 30px;
+	box-sizing: border-box;
+	background: #0c2461;
+  }
+  
+  .btn a.glassMorph {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.051);
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+	border-top: 1px solid rgba(250, 52, 52, 0.1);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	z-index: 10;
+	color: #fff;
+	border-radius: 30px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	text-decoration: none;
+	transition: 0.5s;
+	overflow: hidden;
+	backdrop-filter: blur(15px);
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+  }
+
+a.skewedBtn:before {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 50%;
+	left: -1%;
+	top: -5px;
+	background-color: #ee5253;
+	transform: skewX(30deg);
+	z-index: -1;
+	transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+a.pulseBtn:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(139, 133, 133);
+	border-radius: 100px;
+	transition: all 0.4s;
+	z-index: -1;
+}
+
+a.diagonalSwipeBtn:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	border-top: 50px solid #250e74;
+	border-bottom: 50px solid #250e74;
+	border-right: 50px solid transparent;
+	transition: all 0.5s;
+	z-index: -1;
+	transform: translateX(-100%);
+}
+
+.btn:hover a.glassMorph {
+	letter-spacing: 3px;
+}
+  
+.btn a.glassMorph:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background: linear-gradient(to left, rgba(255, 255, 255, 0.149), transparent);
+	transform: skewX(45deg);
+	transition: 0.5s;
+	transition-delay: 0.5s;
+}
+  
+a.glassMorph:hover::before {
+	transform: skewX(45deg) translateX(200%);
+	transition-delay: 0s;
+}
+  
+.btn:before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	background: #ff0461;
+	bottom: -5px;
+	width: 30px;
+	height: 10px;
+	border-radius: 10px;
+	transition: 0.5s;
+	transition-delay: 0s;
+}
+  
+.btn:hover::before {
+	bottom: 0px;
+	height: 50%;
+	width: 80%;
+	border-radius: 30px;
+	transition-delay: 0.5s;
+}
+  
+a.skewedBtn:after {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 50%;
+	left: 51%;
+	top: 5px;
+	background-color: #0a3d62;
+	transform: skewX(30deg);
+	z-index: -1;
+	transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+a.diagonalSwipeBtn:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	border-top: 50px solid #250e74;
+	border-bottom: 50px solid #250e74;
+	border-left: 50px solid transparent;
+	transition: all 0.5s;
+	z-index: -1;
+	transform: translateX(100%);
+  }
+  
+a.skewedBtn:hover:before {
+	transform: skewX(0deg);
+	left: 50%;
+	top: 0;
+}
+
+a.diagonalSwipeBtn:hover:before {
+	transform: translateX(0%);
+  }
+
+a.pulseBtn:hover:before {
+	transform: scaleX(1.4) scaleY(1.6);
+	opacity: 0;
+}
+
+a.pulseBtn:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+a.targetSightBtn:hover {
+	color: #fff;
+	border: 2px solid transparent;
+  }
+  
+a.skewedBtn:hover:after {
+	transform: skewX(0deg);
+	left: 0%;
+	top: 0;
+}
+
+a.pulseBtn:active {
+	transform: translateY(-1px);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+a.diagonalSwipeBtn:hover:after {
+	transform: translateX(0%);
+}
+  
+a.diagonalSwipeBtn:hover {
+	color: white;
+}
+
+span.targetSpan {
+	position: absolute;
+	background: #1e9bff;
+	box-shadow: 0 0 10px #1e9bff, 0 0 20px #1e9bff, 0 0 30px #1e9bff,
+	  0 0 50px #1e9bff, 0 0 100px #1e9bff;
+}
+
+span.targetSpan:nth-child(1),
+span.targetSpan:nth-child(3) {
+  width: 40px;
+  height: 4px;
+}
+
+span.targetSpan:nth-child(2),
+span.targetSpan:nth-child(4) {
+  width: 4px;
+  height: 40px;
+}
+
+span.targetSpan:nth-child(1) {
+  top: calc(50% - 2px);
+  left: -50px;
+  transition: 0.25s ease-in-out;
+  transform-origin: left;
+  transition-delay: 0.25s;
+}
+
+a.targetSightBtn:hover span.targetSpan:nth-child(1) {
+  left: 50%;
+  transform: scaleX(0);
+  transition-delay: 0s;
+}
+
+span.targetSpan:nth-child(3) {
+  top: calc(50% - 2px);
+  right: -50px;
+  transition: 0.25s ease-in-out;
+  transform-origin: right;
+  transition-delay: 0.25s;
+}
+
+a.targetSightBtn:hover span.targetSpan:nth-child(3) {
+  right: 50%;
+  transform: scaleX(0);
+  transition-delay: 0s;
+}
+
+span.targetSpan:nth-child(2) {
+  left: calc(50% - 2px);
+  top: -50px;
+  transition: 0.25s ease-in-out;
+  transform-origin: top;
+  transition-delay: 0.25s;
+}
+
+a.targetSightBtn:hover span.targetSpan:nth-child(2) {
+  top: 50%;
+  transform: scaleY(0);
+  transition-delay: 0s;
+}
+
+span.targetSpan:nth-child(4) {
+  left: calc(50% - 2px);
+  bottom: -50px;
+  transition: 0.25s ease-in-out;
+  transform-origin: bottom;
+  transition-delay: 0.25s;
+}
+
+a.targetSightBtn:hover span.targetSpan:nth-child(4) {
+  bottom: 50%;
+  transform: scaleY(0);
+  transition-delay: 0s;
+}
+
+a.targetSightBtn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1e9bff;
+  transform: scale(0);
+  transition: 0.25s;
+  z-index: -1;
+}
+
+a.targetSightBtn:hover:before {
+  transform: scale(1);
+  transition-delay: 0.25s;
+  box-shadow: 0 0 10px #1e9bff, 0 0 30px #1e9bff, 0 0 60px #1e9bff;
+}
+
+.btn:after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	background: #ff0461;
+	top: -5px;
+	width: 30px;
+	height: 10px;
+	border-radius: 10px;
+	transition: 0.5s;
+	transition-delay: 0s;
+}
+  
+.btn:hover::after {
+	top: 0px;
+	height: 50%;
+	width: 80%;
+	border-radius: 30px;
+	transition-delay: 0.5s;
+}
+  
+.btn:nth-child(1):before,
+.btn:nth-child(1):after {
+	background: #ff1f72;
+	box-shadow: 0 0 5px #ff1f72, 0 0 15px #ff1f72, 0 0 30px #ff1f72,
+	  0 0 60px #ff1f72;
+}
+  
+.btn:nth-child(2):before,
+.btn:nth-child(2):after {
+	background: #ff1f72;
+	box-shadow: 0 0 5px #ff1f72, 0 0 15px #ff1f72, 0 0 30px #ff1f72,
+	  0 0 60px #ff1f72;
+}
+  
+.btn:nth-child(3):before,
+.btn:nth-child(3):after {
+	background: #ff1f72;
+	box-shadow: 0 0 5px #ff1f72, 0 0 15px #ff1f72, 0 0 30px #ff1f72,
+	  0 0 60px #ff1f72;
+}
