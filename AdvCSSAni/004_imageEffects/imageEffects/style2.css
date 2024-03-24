@@ -1,0 +1,364 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+body {
+	/* height: 100vh; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Lato', sans-serif;
+	flex-direction: column; 
+}
+
+.container_07, 
+.container_08,
+.container_09,
+.container_10,
+.container_11 {
+	width: 450px;
+	height: 300px;
+	position: relative;
+	overflow: hidden;
+	margin: 5px;
+}
+
+.container_07 img,
+.container_08 img,
+.container_09 img,
+.container_10 img,
+.container_11 img {
+	width: 100%;
+}
+
+.container_07:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 120%;
+	height: 205%;
+	background-color: #2d3436;
+	opacity: 0.8;
+	transition: all 0.25s;
+	overflow: hidden;
+	transform: translate(550px, 300px) rotate(45deg);
+  }
+
+  .container_08:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	content: '';
+	background-color: #2d3436;
+	opacity: 0.8;
+  }
+
+  .container_09:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	content: '';
+	background-color: #2d3436;
+	opacity: 0.8;
+  }
+
+  .container_10:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	content: '';
+	background-color: #006266;
+  }
+  
+  .container_11:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	content: '';
+	background-color: #2d3436;
+	opacity: 0.8;
+  }
+
+  .container_07:hover:before {
+	transform: translate(-50px, -150px) rotate(45deg);
+  }
+  
+  .container_07 .caption,
+  .container_08 .caption,
+  .container_09 .caption,
+  .container_10 .caption,
+  .container_11 .caption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	color: white;
+	text-transform: uppercase;
+  }
+  
+ .container_07 h2 {
+	text-align: center;
+	font-size: 17px;
+	padding: 20px;
+	margin-top: 20px;
+	background-color: rgba(0, 0, 0, 0.8);
+	transform: translate(200px, -200px);
+	transition: all 0.25s;
+  }
+
+  .container_08 h2,
+  .container_09 h2,
+  .container_10 h2,
+  .container_11 h2{
+	text-align: center;
+	font-size: 17px;
+	padding: 20px;
+	margin-top: 20px;
+	background: rgba(0, 0, 0, 0.8);
+  }
+  
+  .container_07:hover h2 {
+	transform: translate(0, 0);
+	transition-delay: 0.3s;
+  }
+  
+  .container_07 p {
+	font-size: 16px;
+	width: 80%;
+	align-self: center;
+	text-align: center;
+	transition: all 0.25s;
+	transform: translate(-200px, 200px);
+  }
+
+  .container_08 p,
+  .container_09 p,
+  .container_10 p,
+  .container_11 p {
+	font-size: 16px;
+	width: 80%;
+	align-self: center;
+	text-align: center;
+  }
+  
+  .container_07:hover p {
+	transform: translate(0, 0);
+	transition-delay: 0.4s;
+  }
+  
+  .container_07 a {
+	text-decoration: none;
+	background-color: black;
+	color: white;
+	width: 100px;
+	padding: 15px;
+	margin-bottom: 20px;
+	align-self: center;
+	transition: all 0.25s;
+	transform: translateY(100px);
+  }
+
+  .container_08 a,
+  .container_09 a,
+  .container_10 a,
+  .container_11 a {
+	text-decoration: none;
+	background: #000;
+	color: #fff;
+	width: 100px;
+	padding: 15px;
+	margin-bottom: 20px;
+	align-self: center;
+  }
+  
+  .container_07:hover a {
+	transform: translateY(0);
+	transition-delay: 0.5s;
+  }
+
+  /* OUR EFFECT STYLES GOES HERE FOR CONTAINER_08 */
+  .container_08:before {
+	transform: translate(650px, -100px) rotate(180deg);
+	transition: all 0.2s;
+  }
+  
+  .container_08:hover:before {
+	transform: translate(0, 0) rotate(0deg);
+  }
+  
+  .container_08 h2 {
+	transform: translateY(-150px);
+	transition: all 0.2s;
+  }
+  
+  .container_08:hover h2 {
+	transform: translateY(0px);
+	transition-delay: 0.5s;
+  }
+  
+  .container_08 p {
+	transform: translateX(300px) rotate(90deg);
+	transition: all 0.2s;
+  }
+  
+  .container_08:hover p {
+	transform: translateX(0) rotate(0deg);
+	transition-delay: 0.4s;
+  }
+  
+  .container_08 a {
+	transform: translateY(-300px);
+	transition: all 0.2s;
+  }
+  
+  .container_08:hover a {
+	transform: translateY(0px);
+	transition-delay: 0.3s;
+  }
+  
+  .container_08 {
+	overflow: hidden;
+  }
+
+  /* EFFECTS STYLES GOES HERE FOR CONTAINER_09 */
+
+  .container_09 {
+	background-color: #444;
+	border: 10px solid white;
+  }
+  
+  .container_09 img {
+	transition: all 0.5s;
+	transition-delay: 0.5s;
+  }
+  
+  .container_09:hover img {
+	transform: scale(0);
+	transition-delay: 0s;
+  }
+  
+  .container_09:before {
+	background-color: #006266;
+	transform: scale(0) rotate(-180deg);
+	transition: all 0.5s;
+  }
+  
+  .container_09:hover:before {
+	transform: scale(1) rotate(0deg);
+	transition-delay: 0.5s;
+  }
+  
+  .container_09 h2,
+  .container_09 p,
+  .container_09 a {
+	opacity: 0;
+	transition: all 0.5s;
+  }
+  
+  .container_09:hover h2,
+  .container_09:hover p,
+  .container_09:hover a {
+	opacity: 1;
+	transition-delay: 1s;
+  }
+
+  /* OUR EFFECT STYLES GOES HERE */
+  .container_10:before {
+	opacity: 0;
+	transition: all 0.3s;
+  }
+  
+  .container_10:hover:before {
+	opacity: 1;
+  }
+  
+  .container_10 h2, .container_10 p {
+	transform: scale(10);
+	opacity: 0;
+	transition: all 0.3s;
+  }
+  
+  .container_10:hover h2,
+  .container_10:hover p {
+	opacity: 1;
+	transform: scale(1);
+	transition-delay: 0.2s;
+  }
+  
+  .container_10 a {
+	transform: translateY(150px);
+	transition: all 0.3s;
+  }
+  
+  .container_10:hover a {
+	transform: translateY(0);
+	transition-delay: 0.2s;
+  }
+
+  /* hovering effect goes here */
+  .container_11 {
+	background-color: #444;
+	border: 10px solid white;
+	overflow: hidden;
+  }
+  
+  .container_11 img {
+	transition: all 0.5s;
+  }
+  
+  .container_11:hover img {
+	transform: rotate(720deg) scale(0);
+	opacity: 0;
+  }
+  
+  .container_11:before {
+	background-color: #006266;
+	opacity: 0;
+	transition: all 0.3s; 
+  }
+  
+  .container_11:hover:before {
+	opacity: 1;
+	transition-delay: 0.5s;
+  }
+  
+  .container_11 a {
+	transform: translateY(-300px);
+	transition: all 0.2s;
+  }
+  
+  .container_11:hover a {
+	transform: translateY(0);
+	transition-delay: 0.5s;
+  }
+  
+  .container_11 p {
+	transform: translateY(-300px);
+	transition: all 0.2s;
+  }
+  
+  .container_11:hover p {
+	transform: translateY(0);
+	transition-delay: 0.7s;
+  }
+  
+  .container_11 h2 {
+	transform: translateY(-300px);
+	transition: all 0.2s;
+  }
+  
+  .container_11:hover h2 {
+	transform: translateY(0);
+	transition-delay: 0.9s;
+  }
