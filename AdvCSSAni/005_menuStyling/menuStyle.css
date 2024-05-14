@@ -719,6 +719,7 @@ ul.eleventhMenu a {
 	  color: rgba(215, 212, 212, 0.3);
 	  transition-delay: 0s;
 	  background: #666565;
+	  border-radius: 45px;
   }
   ul.thirteenthMenu li a:before
   {
