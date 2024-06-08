@@ -1,0 +1,29 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+@import url("https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Raleway', Arial, sans-serif;
+  flex-direction: column;
+}
+
+.firstKey {
+	width: 150px;
+	height: 150px;
+	background: linear-gradient(45deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+}
+
+.firstKey:hover {
+	animation-name: moving;
+	animation-duration: 3s;
+}
+
+@keyframes moving {
+	from { transform: translateX(0); }
+
+	to { transform: translateX(1000px); }
+}
