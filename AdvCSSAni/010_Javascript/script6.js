@@ -1,5 +1,6 @@
-let pattern = document.querySelector('.bg');
+let skewed = document.querySelector('.skewed');
 
 window.addEventListener('scroll', () => {
-    pattern.style.backgroundPosition = window.scrollY + 'px'; 
+    let value = -10 + window.scrollY/60;
+    skewed.style.transform = `skewY(${value}deg)`;
 })
