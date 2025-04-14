@@ -1,0 +1,16 @@
+div {
+   padding: 20px 40px;
+   border: 5px dashed orange;
+   margin: 10px 25px;
+   display: inline-block;
+}
+
+.firstBox {
+   height: 300px;
+   width: 50%;
+   visibility: hidden;
+}
+
+div:last-of-type:hover {
+   border: 10px solid orange;
+}
