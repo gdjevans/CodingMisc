@@ -1,0 +1,16 @@
+Option Explicit
+
+Sub AssignmentOne()
+    Debug.Print 3 + 4 'Adds two numbers
+    
+    Debug.Print "My name is Karloff"
+    
+    Debug.Print Range("A1").Value + Range("B1").Value
+    VBA.MsgBox Range("A1").Value + Range("B1").Value
+    'VBA.MsgBox Argument not optional
+    
+End Sub
+
+Sub ConcatenateStuff()
+    Debug.Print "Yuppi" & vbNewLine & "Karloff" 'This concatenates with a carriage return set between the two strings
+End Sub

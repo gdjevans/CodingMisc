@@ -1,0 +1,8 @@
+Option Explicit
+
+Sub ShowBoxes()
+    MsgBox "Hello there"
+    MsgBox 2
+    MsgBox 3 + 5
+    MsgBox Range("A1").Value
+End Sub
