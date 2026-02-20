@@ -1,0 +1,8 @@
+Option Explicit
+
+Sub PrintStufftoConsole()
+    Debug.Print Range("A1").Value
+    Range("A1").Value = "Goodbye"
+    Debug.Print Range("A1").Value
+    Range("A1").Value = "Hello"
+End Sub
